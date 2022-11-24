@@ -1,0 +1,26 @@
+diff -up kea-Kea-2.3.2/configure.ac.omv~ kea-Kea-2.3.2/configure.ac
+--- kea-Kea-2.3.2/configure.ac.omv~	2022-11-24 02:49:10.910796062 +0100
++++ kea-Kea-2.3.2/configure.ac	2022-11-24 02:50:28.247889912 +0100
+@@ -848,18 +848,22 @@ if test "${log4cplus_path}" = "no" ; the
+     AC_MSG_ERROR([Need log4cplus])
+ elif test "${log4cplus_path}" != "yes" ; then
+   DISTCHECK_LOG4CPLUS_CONFIGURE_FLAG="-with-log4cplus=${log4cplus_path}"
++  if [ "${log4cplus_path}" != "/usr" ]; then
+   LOG4CPLUS_INCLUDES="-I${log4cplus_path}/include"
+   LOG4CPLUS_LIBS="-L${log4cplus_path}/lib"
++  fi
+ else
+ # If not specified, try some common paths.
+         for d in $defaultdirs
+         do
+                 if test -f $d/include/log4cplus/logger.h; then
++                        if [ "$d" != "/usr" ]; then
+                         LOG4CPLUS_INCLUDES="-I$d/include"
+                         LOG4CPLUS_LIBS="-L$d/lib"
+                         if test -d $d/lib64; then
+                                 LOG4CPLUS_LIBS="$LOG4CPLUS_LIBS -L$d/lib64"
+                         fi
++			fi
+                         break
+                 fi
+         done
