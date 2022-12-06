@@ -20,6 +20,8 @@ BuildRequires: boost-devel
 BuildRequires: python-sphinx
 BuildRequires: cmake(log4cplus)
 BuildRequires: python
+BuildRequires: pkgconfig(botan-2)
+BuildRequires: pkgconfig(libcrypto)
 
 %description
 Kea provides DHCPv4 and DHCPv6 servers, a dynamic DNS update module,
