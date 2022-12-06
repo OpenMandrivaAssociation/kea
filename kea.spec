@@ -18,6 +18,7 @@ BuildRequires: bison
 BuildRequires: flex
 BuildRequires: boost-devel
 BuildRequires: python-sphinx
+BuildRequires: python%{pyver}dist(sphinx-rtd-theme)
 BuildRequires: cmake(log4cplus)
 BuildRequires: python
 BuildRequires: pkgconfig(botan-2)
