@@ -10,6 +10,8 @@ Summary: A DHCPv4 and DHCPv6 server
 URL: https://www.isc.org/kea/
 License: MPL-2.0
 Group: Servers
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: autoconf
 BuildRequires: automake
 BuildRequires: libtool
