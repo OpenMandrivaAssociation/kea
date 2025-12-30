@@ -3,7 +3,7 @@
 
 Name: kea
 Version: 2.3.2
-Release: 3
+Release: 4
 Source0: https://gitlab.isc.org/isc-projects/kea/-/archive/Kea-%{version}/kea-Kea-%{version}.tar.bz2
 Patch0: kea-2.3.2-no-Lusrlib.patch
 Summary: A DHCPv4 and DHCPv6 server
